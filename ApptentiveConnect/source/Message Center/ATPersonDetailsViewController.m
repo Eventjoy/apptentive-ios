@@ -130,6 +130,12 @@ enum kPersonDetailsTableSections {
 	emailValidationLabel.frame = f;
 	
 	emailValidationLabel.hidden = [self emailIsValid];
+
+	if ([ATUtilities osVersionGreaterThanOrEqualTo:@"7"]) {
+		[self.navigationItem.leftBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
+		[self.navigationItem.backBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
+		[self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
+	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

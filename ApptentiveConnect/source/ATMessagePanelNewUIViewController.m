@@ -245,7 +245,7 @@
 			else {
 				self.emailField.placeholder = ATLocalizedString(@"Email", @"Email Address Field Placeholder");
 			}
-			[self.emailField setValue:[UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0] forKeyPath:@"_placeholderLabel.textColor"];
+			[self.emailField setValue:[UIColor colorWithRed:0.7 green:0.75 blue:0.8 alpha:1.0] forKeyPath:@"_placeholderLabel.textColor"];
 			
 			self.emailField.font = emailFont;
 			self.emailField.adjustsFontSizeToFitWidth = YES;
@@ -309,7 +309,7 @@
 	} else {
 		self.feedbackView.placeholder = ATLocalizedString(@"Message (required)", @"Message placeholder in iOS 7 message panel");
 	}
-	self.feedbackView.placeholderColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+	self.feedbackView.placeholderColor = [UIColor colorWithRed:0.7 green:0.75 blue:0.8 alpha:1.0];
 	
 	CGSize contentSize = CGSizeMake(self.scrollView.bounds.size.width, offsetY);
 	

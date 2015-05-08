@@ -82,7 +82,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[dataSource start];
-	
+
 	self.navigationItem.titleView = [defaultTheme titleViewForMessageCenterViewController:self];
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)] autorelease];
 	if ([self.navigationItem.rightBarButtonItem respondsToSelector:@selector(initWithImage:landscapeImagePhone:style:target:action:)]) {
@@ -94,6 +94,9 @@
 	[self.view addSubview:self.containerView];
 	if ([ATUtilities osVersionGreaterThanOrEqualTo:@"7"]) {
 		inputViewNib = [UINib nibWithNibName:@"ATMessageInputViewV7" bundle:[ATConnect resourceBundle]];
+		[self.navigationItem.backBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
+		[self.navigationItem.leftBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
+		[self.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor colorWithWhite:1 alpha:1]];
 	} else {
 		inputViewNib = [UINib nibWithNibName:@"ATMessageInputView" bundle:[ATConnect resourceBundle]];
 	}
@@ -112,7 +115,9 @@
 	}
 	
 	[defaultTheme configureSendButton:inputView.sendButton forMessageCenterViewController:self];
+	[inputView.sendButton setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];
 	[defaultTheme configureAttachmentsButton:inputView.attachButton forMessageCenterViewController:self];
+	[inputView.attachButton setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];
 	inputView.backgroundImage = [defaultTheme backgroundImageForMessageForMessageCenterViewController:self];
 	
 	inputView.placeholder = ATLocalizedString(@"Type a message…", @"Placeholder for message center text input.");

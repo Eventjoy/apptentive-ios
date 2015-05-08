@@ -64,7 +64,8 @@ typedef enum {
 	messageDateFormatter.timeStyle = NSDateFormatterShortStyle;
 	
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+	//self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+	self.tableView.backgroundColor = [UIColor colorWithWhite:0.99 alpha:1];		// <--- Message center background
 	self.tableView.scrollsToTop = YES;
 	
 	[self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[ATBackend imageNamed:@"at_chat_bg"]]];

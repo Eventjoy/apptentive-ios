@@ -74,7 +74,11 @@ static NSString *const ATFileMessageUserCellV7Identifier = @"ATFileMessageUserCe
     [super viewDidLoad];
 	
 	self.backgroundImageView.contentMode = UIViewContentModeCenter;
-	[self.backgroundImageView setImage:blurredImage];
+//	[self.backgroundImageView setImage:blurredImage];
+	[self.backgroundImageView setBackgroundColor:[UIColor colorWithWhite:0.99 alpha:1]];		// <--- Message center background
+	[self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]]; //colorWithRed:78/255. green:188/255. blue:197/255. alpha:1]];
+	[self.navigationController.navigationItem.leftBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor whiteColor]];
+	[self.navigationController.navigationItem.rightBarButtonItem setTintColor:[UIColor colorWithRed:255/255. green:66/255. blue:60/255. alpha:1]];//[UIColor whiteColor]];
 	
 	UINib *automatedCellNib = [UINib nibWithNibName:@"ATAutomatedMessageCellV7" bundle:[ATConnect resourceBundle]];
 	UINib *devTextCellNib = [UINib nibWithNibName:@"ATTextMessageDevCellV7" bundle:[ATConnect resourceBundle]];

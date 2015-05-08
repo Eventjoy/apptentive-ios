@@ -22,7 +22,7 @@
 	self.messageLabel.textColor = [UIColor blackColor];
 	self.messageLabel.text = self.message.body;
 	
-	self.textContainerView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+	self.textContainerView.backgroundColor = [UIColor colorWithRed:.95 green:.95 blue:.95 alpha:1];
 	self.textContainerView.layer.cornerRadius = 10;
 	
 	self.userIconView.image = [ATBackend imageNamed:@"at_mc_user_icon"];
